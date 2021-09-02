@@ -1,0 +1,143 @@
+/* Root */
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+
+:root {
+  --font: "Barlow Semi Condensed", sans-serif;
+  --Moderate-violet: hsl(263, 55%, 52%);
+  --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --Very-dark-blackish-blue: hsl(219, 29%, 14%);
+  --White: hsl(0, 0%, 100%);
+  --Light-gray: hsl(0, 0%, 81%);
+  --Light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 13px;
+}
+/* Root */
+body {
+  background-color: var(--Light-grayish-blue);
+}
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: var(--font);
+}
+/* Grid */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 2.5rem;
+  width: 70%;
+  max-width: 1300px;
+}
+/* Grid */
+
+/* Card */
+.card {
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+.daniel {
+  grid-column: 1/3;
+  grid-row: 1/2;
+  background-color: var(--Moderate-violet);
+  color: var(--White);
+  background: url(./images/bg-pattern-quotation.svg) var(--Moderate-violet)
+    no-repeat;
+  background-position: 80% 5%;
+  background-size: 8rem;
+}
+
+.daniel .summary img {
+  border: 2px solid hsl(263, 55%, 72%);
+}
+
+.jonathan {
+  grid-column: 3/4;
+  grid-row: 1/2;
+  background-color: var(--Very-dark-grayish-blue);
+  color: var(--White);
+}
+
+.jenette {
+  grid-row: 2/3;
+  grid-column: 1/2;
+  background-color: var(--White);
+  color: var(--Very-dark-blackish-blue);
+}
+
+.patrick {
+  grid-row: 2/3;
+  grid-column: 2/4;
+  background-color: var(--Very-dark-blackish-blue);
+  color: var(--White);
+}
+
+.patrick .summary img {
+  border: 2px solid var(--Moderate-violet);
+}
+
+.kira {
+  grid-column: 4/5;
+  grid-row: 1/3;
+  background-color: var(--White);
+  color: var(--Very-dark-blackish-blue);
+}
+
+.summary {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.name {
+  margin-bottom: 0.25rem;
+}
+.verified {
+  opacity: 0.5;
+}
+
+img {
+  max-width: 3rem;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+.title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.review {
+  line-height: 2;
+  opacity: 0.7;
+}
+/* Card */
+
+@media only screen and (max-width: 450px) {
+  main {
+    height: auto;
+    margin: 2rem 0;
+  }
+  .grid-container {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .daniel {
+    background-position: 90% 0%;
+  }
+}
